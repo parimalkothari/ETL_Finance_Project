@@ -10,7 +10,7 @@ from airflow import Dataset
 from airflow.decorators import dag, task
 
 symbols = ['AAPL', 'IBM', 'AMZN', 'MSFT', 'TSLA'] 
-client = MongoClient("mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<database-name>?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://<username>:<password>@<clustername>.mongodb.net/<database-name>?retryWrites=true&w=majority")
 db = client.get_database("finance_metadata")
 now = pendulum.now()
 
