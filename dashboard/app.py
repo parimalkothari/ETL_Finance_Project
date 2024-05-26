@@ -9,7 +9,7 @@ import datetime
 
 # MongoDB connection
 try:
-    client = pymongo.MongoClient("mongodb+srv://test:test@cluster0.kynbj2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    client = pymongo.MongoClient("mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<database-name>?retryWrites=true&w=majority")
     db = client["finance_metadata"]
 except:
     print("Connection error")
