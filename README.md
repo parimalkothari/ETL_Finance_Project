@@ -33,8 +33,6 @@ This project implements an automated ETL (Extract, Transform, Load) pipeline and
 - Data Analysis
 - Data Visualization
 
-## Installation and Setup
-
 ### Prerequisites
 
 - Python 3.7+
