@@ -10,7 +10,7 @@ from airflow import Dataset
 from airflow.decorators import dag, task
 
 symbols = ['AAPL', 'IBM', 'AMZN', 'MSFT', 'TSLA'] 
-client = MongoClient("mongodb+srv://test:test@cluster0.kynbj2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient("mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<database-name>?retryWrites=true&w=majority")
 db = client.get_database("finance_metadata")
 now = pendulum.now()
 
@@ -26,7 +26,7 @@ def etl_finance_meta():
             'function': 'TIME_SERIES_DAILY',
             'symbol': symbol,
             'outputsize':'full',  
-            'apikey': "YGDVY075AOQGC0BE"
+            'apikey': "xxxxxx"
             }
             response = requests.get(url, params=params)
             if response.status_code == 200:
